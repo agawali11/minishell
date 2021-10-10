@@ -100,7 +100,7 @@ void run_execprocc(){
 		if (waitpid((__pid_t) atoi(tokens[1]), &status_c, 0) < 0)
         {
 
-            perror("ERROR:foreground process");
+            perror("foreground process() error");
             exit(UNKNOWN_CMD);
             
         }
@@ -150,7 +150,7 @@ void run_execprocc(){
             //int status_c;
             if (waitpid(pid, & status_c, 0) < 0)
             {
-                fprintf(stderr, "ERROR in Running foreground Process  \n");
+                fprintf(stderr, "Error in Running Foreground Process  \n");
                 exit(UNKNOWN_CMD);
             }
         }
